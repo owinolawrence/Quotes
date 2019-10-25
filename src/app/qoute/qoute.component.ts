@@ -19,7 +19,7 @@ export class QouteComponent implements OnInit {
     new Quotes("Don’t watch the clock; do what it does. Keep going.", "Sam Levenson", "uisgaifdg", new Date(1990, 6, 19))
   ];
   toggleDetails(index) {
-    this.quotes[index].showDetail = !this.quotes[index].showDetail;
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
   deleteGoal(isComplete, index) {
     if (isComplete) {
