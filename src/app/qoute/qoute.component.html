@@ -1,3 +1,14 @@
-<div class="container-fluid">
-        <h1> Quotes</h1>
-</div>
+
+        
+        <div>
+        <h1>Motivational Quotes</h1>
+        </div>
+        <div *ngFor='let quote of quotes'>
+        <p>{{quote.quote}}</p>
+        <h5>{{quote.author}}</h5>
+        <button  btn btn-bg-danger(click)='toggleDetails(i)'>Toggle Details</button>y8 7g8y
+        </div>
+
+
+
+
