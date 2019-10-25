@@ -1,14 +1,16 @@
 
-        
-        <div>
+         <div>
         <h1>Motivational Quotes</h1>
         </div>
-        <div *ngFor='let quote of quotes'>
+        <div *ngFor='let quote of quotes ;let i = index'>
         <p>{{quote.quote}}</p>
         <h5>{{quote.author}}</h5>
-        <button  btn btn-bg-danger(click)='toggleDetails(i)'>Toggle Details</button>y8 7g8y
-        </div>
-
+        {{quote.description}}
+        <button (click)='toggleDetails(i)'>View more</button>
+      <app-quote-detail *ngIf ="quote.showDetail" [quote
+      ] ="quote"></app-quote-detail>  
+      <p *ngIf='quotes.length > 5'></p>
+</div>
 
 
 
