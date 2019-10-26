@@ -6,11 +6,12 @@
     <div class="col md-6">
 
       <div *ngFor='let quote of quotes ;let i = index'>
-        <p appHighlight> {{quote.quote}} </p>
-        <h5> by {{quote.author}}</h5>
-        <h6> submitted by {{quote.description}} </h6>
+       <div class="card"> <h3 appHighlight> {{quote.quote}} </h3>
+        <h4> by {{quote.author}}</h4>
+        <h6> submitted by {{quote.description}} </h6></div>
         <button (click)='toggleDetails(i)' class="bg-primary text-white">View more</button>
       </div>
+      
       <app-quote-detail *ngIf="quotes.showDescription" [quote ]="quote" (isComplete)="deletequote($event,i)">
       </app-quote-detail>
 
