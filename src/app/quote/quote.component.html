@@ -1,6 +1,6 @@
 
          <div>
-        <h1>Motivational Quotes</h1>
+        <h1>Top 5 World Motivational Quotes</h1>
         </div>
         <div *ngFor='let quote of quotes ;let i = index'>
         <p>{{quote.quote}}</p>
@@ -8,7 +8,7 @@
         {{quote.description}}
         <button (click)='toggleDetails(i)' class="bg-primary text-white">View more</button>
       <app-quote-detail *ngIf ="quote.showDescription" [quote
-      ] ="quote"></app-quote-detail>  
+      ] ="quote"  (isComplete) ="completequote($event,i)"></app-quote-detail>  
       <p *ngIf='quotes.length > 5'></p>
 </div>
 
