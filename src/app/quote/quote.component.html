@@ -3,11 +3,11 @@
         <h1>Top 5 World Motivational Quotes</h1>
         </div>
         <div *ngFor='let quote of quotes ;let i = index'>
-        <p>{{quote.quote}}</p>
+        <p appHighlight> {{quote.quote}} due on {{quote.calenderDate|date|uppercase}}</p>
         <h5>{{quote.author}}</h5>
         {{quote.description}}
         <button (click)='toggleDetails(i)' class="bg-primary text-white">View more</button>
-      <app-quote-detail *ngIf ="quote.showDescription" [quote
+      <app-quote-detail *ngIf ="quotes.showDescription" [quote
       ] ="quote"  (isComplete) ="completequote($event,i)"></app-quote-detail>  
       <p *ngIf='quotes.length > 5'></p>
 </div>
