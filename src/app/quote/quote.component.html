@@ -8,9 +8,11 @@
         {{quote.description}}
         <button (click)='toggleDetails(i)' class="bg-primary text-white">View more</button>
       <app-quote-detail *ngIf ="quotes.showDescription" [quote
-      ] ="quote"  (isComplete) ="completequote($event,i)"></app-quote-detail>  
-      <p *ngIf='quotes.length > 5'></p>
-</div>
+      ] ="quote"  (isComplete) ="deletequote($event,i)"></app-quote-detail>  
+    </div>
+<app-quote-form></app-quote-form>
+<p *ngIf='quotes.length > 5'></p>
+    
 
 
 
