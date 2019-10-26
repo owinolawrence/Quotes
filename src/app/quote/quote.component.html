@@ -1,30 +1,26 @@
-        
-        <div class="container-fluid">
-         
-        <h1>Top 4 World Motivational Quotes</h1>
-        <div class="row">
-          
-          <div class="col md-6">
-            <div class="card">
-        <div *ngFor='let quote of quotes ;let i = index'>
-        <p appHighlight> {{quote.quote}} due on {{quote.calenderDate|date|uppercase}}</p>
-        <h5>{{quote.author}}</h5>
-        {{quote.description}}</div>
+<div class="container-fluid">
+
+  <h1 class="text-center">Top 4 World Motivational Quotes</h1>
+  <div class="row">
+
+    <div class="col md-6">
+
+      <div *ngFor='let quote of quotes ;let i = index'>
+        <p appHighlight> {{quote.quote}} </p>
+        <h5> by {{quote.author}}</h5>
+        {{quote.description}} 
         <button (click)='toggleDetails(i)' class="bg-primary text-white">View more</button>
-      <app-quote-detail *ngIf ="quotes.showDescription" [quote
-      ] ="quote"  (isComplete) ="deletequote($event,i)"></app-quote-detail>  
+      </div>
+      <app-quote-detail *ngIf="quotes.showDescription" [quote ]="quote" (isComplete)="deletequote($event,i)">
+      </app-quote-detail>
+
+    </div>
+    <div class="col-md 6">
+      <div class="card">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      </div>
     </div>
   </div>
-  <div class="col-md 6">
-    <div class="card">
-<app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-</div>
-</div>
-</div>
 
 </div>
 <p *ngIf='quotes.length > 5'></p>
-    
-
-
-
