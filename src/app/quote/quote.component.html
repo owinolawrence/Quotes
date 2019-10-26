@@ -6,8 +6,8 @@
         <p>{{quote.quote}}</p>
         <h5>{{quote.author}}</h5>
         {{quote.description}}
-        <button (click)='toggleDetails(i)'>View more</button>
-      <app-quote-detail *ngIf ="quote.showDetail" [quote
+        <button (click)='toggleDetails(i)' class="bg-primary text-white">View more</button>
+      <app-quote-detail *ngIf ="quote.showDescription" [quote
       ] ="quote"></app-quote-detail>  
       <p *ngIf='quotes.length > 5'></p>
 </div>
