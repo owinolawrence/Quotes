@@ -4,6 +4,6 @@ constructor(
     public quote:string, 
     public author:string,
     public description:string, 
-    public date :Date )
+    public calenderDate :Date )
 {this.showDescription =false}
 }
