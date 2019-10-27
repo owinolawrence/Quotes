@@ -1,5 +1,10 @@
-<p>
-        {{quote.description}}
-      </p>
-      <p>This quote will be complete in {{quote.calenderDate|dateCount}} days</p>
-      <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+<strong>By {{quote.author}}</strong>
+
+<span id="up"><i class="fas fa-thumbs-up fa-col m-2 text-success fa-1x"
+        (click)='fnIncrease(true)'></i>{{quote.upvote}}</span>
+<span id="down" (click)=fnDecrease(true)><i class="fas fa-thumbs-down m-3 fa-1x"></i>{{quote.downvote}}</span>
+<span class="ml-2">{{quote.elapse|dateCount}}</span>
+<span id="delete" (click)='quoteDan(true)'><i class="far fa-trash-alt fa-2x text-danger float-right"></i></span>
+
+<p>This quote was posted {{quote.calenderDate|dateCount}} days ago</p>
+<button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
