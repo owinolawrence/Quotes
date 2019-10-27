@@ -1,19 +1,35 @@
 <div class="container-fluid">
+  <div class="">
+    <div class="svg-wrapper">
+      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="60" width="320" />
+      </svg>
+      <div class="text" align="center">
 
-  <h1 class="text-center">Top 4 World Motivational Quotes</h1>
+        <h1>Top Quotes</h1>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
 
     <div class="col md-6">
 
       <div *ngFor='let quote of quotes ;let i = index'>
-       <div class="card"> <h3 appHighlight> {{quote.quote}} </h3>
-        <h4> by {{quote.author}}</h4>
-        <h6> submitted by {{quote.description}} </h6></div>
-        <button (click)='toggleDetails(i)' class="bg-primary text-white">View more</button>
+        <div class="card">
+          <h3 appHighlight> {{quote.quote}} </h3>
+          <div class="card  ">
+            <h4> by {{quote.author}}</h4>
+            <h6> submitted by {{quote.description}} </h6>
+          </div>
+
+          <app-quote-detail *ngIf="quotes.showDescription" [quote ]="quote" (isComplete)="deletequote($event,i)">
+          </app-quote-detail>
+        </div>
+        <button (click)='toggleDetails(i)' class="bg-primary text-white">View More</button>
       </div>
-      
-      <app-quote-detail *ngIf="quotes.showDescription" [quote ]="quote" (isComplete)="deletequote($event,i)">
-      </app-quote-detail>
+
+
 
     </div>
     <div class="col-md 6">
