@@ -5,5 +5,5 @@ constructor(
     public author:string,
     public description:string, 
     public calenderDate :Date )
-{this.showDescription =false}
+{this.showDescription =false ;}
 }
