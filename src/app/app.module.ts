@@ -6,19 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
-import { HighlightvoteDirective } from './highlightvote.directive';
+// import { HighlightvoteDirective } from './highlightvote.directive';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
-import { from } from 'rxjs';
 import { DateCountPipe } from './date-count.pipe';
+import { CountInputComponent } from './count-input/count-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
     QuoteDetailComponent,
-    HighlightvoteDirective,
+    // HighlightvoteDirective,
     QuoteFormComponent,
-    DateCountPipe
+    DateCountPipe,
+    CountInputComponent
   ],
   imports: [
     BrowserModule,
