@@ -1,60 +1,34 @@
+.container-fluid {
+    background-color: #233714;
+    height: 100vh;
+    
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
-  }
-  h1{
+}
+
+h1 {
     text-align: center;
-    color: red;
+    color: white;
     margin-bottom: 70px;
-      
-  }
-  h1:hover{
-      color :blue;
-  }
-  h3{
-      font-size: 23px;
-  }
-  .svg-wrapper {
-    height: 100px;
-    margin: 0 auto;
-    position: relative;
-    top: 300%;
-    transform: translateY(-50%);
-    width: 450px;
-    padding: 50px;
-   }
-   .shape {
-    fill: transparent;
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 8px;
-    stroke: darkred;
-   }
-   .text {
-    color: darkgoldenrod;
-    font-family: 'Cinzel', serif;
-    font-size: 22px;
-    letter-spacing: 8px;
-    line-height: 50px;
-    position: relative;
-    top: -70px;
-    
-   }
-   @keyframes draw {
-    0% {
-      stroke-dasharray: 140 540;
-      stroke-dashoffset: -474;
-      stroke-width: 8px;
-    }
-    100% {
-      stroke-dasharray: 760;
-      stroke-dashoffset: 0;
-      stroke-width: 6px;
-    }
-   }
-   .svg-wrapper:hover .shape {
-    -webkit-animation: 0.5s draw linear forwards;
-    animation: 0.5s draw linear forwards;
-   }
+    text-transform: uppercase;
+    font-size: 29px;
+    font-family: 'Srisakdi', cursive;
+font-family: 'Bowlby One SC', cursive;
+font-family: 'Akronim', cursive;
+font-family: 'Sancreek', cursive;
+}
+
+h1:hover {
+    color: blue;
+}
+
+h3 {
+    font-size: 28px;
+    font-family: 'Srisakdi', cursive;
+}
+
