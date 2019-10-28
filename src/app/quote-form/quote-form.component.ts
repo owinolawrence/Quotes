@@ -18,4 +18,3 @@ submitQuote(){
   ngOnInit() {
   }
 }
-
