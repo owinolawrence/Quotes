@@ -1,6 +1,5 @@
-#delete:hover{
-    cursor: pointer;
-}
-#up,#down{
-    cursor: pointer;
+h4,h6{
+    font-family: 'Bowlby One SC', cursive;
+    font-family: 'Akronim', cursive;
+    font-family: 'Sancreek', cursive;  
 }
