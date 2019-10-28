@@ -1,9 +1,11 @@
-export class Quotes{
-showDescription :boolean;
-constructor(
-    public quote:string, 
-    public author:string,
-    public description:string, 
-    public calenderDate :Date )
-{this.showDescription =false ;}
+export class Quotes {
+    showDescription: boolean;
+    upvote: number;
+    downvote: number;
+    constructor(
+        public quote: string,
+        public author: string,
+        public description: string,
+        public date: Date) 
+        { this.showDescription = false; }
 }
