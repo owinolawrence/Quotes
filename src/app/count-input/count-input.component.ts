@@ -9,13 +9,15 @@ export class CountInputComponent implements OnInit {
 @Input()
   
 counterValue = 0;
+counteValue = 0;
+
 
 increment(){
   this.counterValue ++;
 }
 
  decrement (){
-  this.counterValue ++;
+  this.counteValue ++;
 }
   constructor() { }
 
